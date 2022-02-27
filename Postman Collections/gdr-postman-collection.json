@@ -10,7 +10,7 @@
       "item": [
         {
           "name": "GetSalesReport",
-          "_postman_id": "718fc7e1-f00b-4f68-b25e-70661f450943",
+          "id": "718fc7e1-f00b-4f68-b25e-70661f450943",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -32,7 +32,7 @@
         },
         {
           "name": "GetItemsReport",
-          "_postman_id": "dc2710dc-0b41-43e3-a6d6-25ecf24717e2",
+          "id": "dc2710dc-0b41-43e3-a6d6-25ecf24717e2",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -54,7 +54,7 @@
         },
         {
           "name": "GetAcquisitionsReport",
-          "_postman_id": "ff499501-1756-4f80-b7da-73621781ed6c",
+          "id": "ff499501-1756-4f80-b7da-73621781ed6c",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -75,14 +75,14 @@
           "response": []
         }
       ],
-      "_postman_id": "343840a5-0332-48c0-b749-280cd6007464"
+      "id": "343840a5-0332-48c0-b749-280cd6007464"
     },
     {
       "name": "Acquisition",
       "item": [
         {
           "name": "list",
-          "_postman_id": "e14a973e-b5b2-426f-bead-e24700c99b07",
+          "id": "e14a973e-b5b2-426f-bead-e24700c99b07",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -104,7 +104,7 @@
         },
         {
           "name": "list Copy",
-          "_postman_id": "854de2a5-b4ff-4aac-ba0c-af88fa33193b",
+          "id": "854de2a5-b4ff-4aac-ba0c-af88fa33193b",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -126,7 +126,7 @@
         },
         {
           "name": "CreateAndCatalog",
-          "_postman_id": "42dd4d02-e883-4628-8073-bc512da7aebf",
+          "id": "42dd4d02-e883-4628-8073-bc512da7aebf",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -147,14 +147,14 @@
           "response": []
         }
       ],
-      "_postman_id": "2c2f4b1c-5f6c-4f8c-85e3-de44298e307b"
+      "id": "2c2f4b1c-5f6c-4f8c-85e3-de44298e307b"
     },
     {
       "name": "Operations",
       "item": [
         {
           "name": "list",
-          "_postman_id": "96da4722-efb1-43e2-b0c1-fac8fc65d940",
+          "id": "96da4722-efb1-43e2-b0c1-fac8fc65d940",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -175,14 +175,14 @@
           "response": []
         }
       ],
-      "_postman_id": "dbdaa4ce-c252-4088-9f63-36f3d2dbd9d6"
+      "id": "dbdaa4ce-c252-4088-9f63-36f3d2dbd9d6"
     },
     {
       "name": "OperationTypes",
       "item": [
         {
           "name": "list",
-          "_postman_id": "b755771e-f9b9-447f-a420-855602a69176",
+          "id": "b755771e-f9b9-447f-a420-855602a69176",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -203,7 +203,7 @@
           "response": []
         }
       ],
-      "_postman_id": "50e3859c-6c66-48a1-af12-d3ecef6bc38c"
+      "id": "50e3859c-6c66-48a1-af12-d3ecef6bc38c"
     },
     {
       "name": "Users",
@@ -234,7 +234,7 @@
               }
             }
           ],
-          "_postman_id": "4b8c5d8a-a8dc-477c-9e75-c409b62fcf2f",
+          "id": "4b8c5d8a-a8dc-477c-9e75-c409b62fcf2f",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -255,14 +255,14 @@
           "response": []
         }
       ],
-      "_postman_id": "cb17d5a5-10cf-4af9-a4f4-7309285a28af"
+      "id": "cb17d5a5-10cf-4af9-a4f4-7309285a28af"
     },
     {
       "name": "Tills",
       "item": [
         {
           "name": "tills",
-          "_postman_id": "c868b346-a8ae-4422-9064-71a2b2dd170a",
+          "id": "c868b346-a8ae-4422-9064-71a2b2dd170a",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -283,14 +283,14 @@
           "response": []
         }
       ],
-      "_postman_id": "920c4193-9e8f-4357-9615-a967ee230037"
+      "id": "920c4193-9e8f-4357-9615-a967ee230037"
     },
     {
       "name": "ItemTypes",
       "item": [
         {
           "name": "list",
-          "_postman_id": "5c9fdf56-69f6-4446-97f5-85bb4c58645a",
+          "id": "5c9fdf56-69f6-4446-97f5-85bb4c58645a",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -311,14 +311,14 @@
           "response": []
         }
       ],
-      "_postman_id": "3275af0d-a675-46c9-8543-be8dd56b898a"
+      "id": "3275af0d-a675-46c9-8543-be8dd56b898a"
     },
     {
       "name": "Items",
       "item": [
         {
           "name": "List",
-          "_postman_id": "cc9f2b4d-5eaa-4586-8a4b-4b720fe621ef",
+          "id": "cc9f2b4d-5eaa-4586-8a4b-4b720fe621ef",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -339,14 +339,14 @@
           "response": []
         }
       ],
-      "_postman_id": "ecb55884-eec2-4011-a89c-2bb40b182ab0"
+      "id": "ecb55884-eec2-4011-a89c-2bb40b182ab0"
     },
     {
       "name": "Clients",
       "item": [
         {
           "name": "list",
-          "_postman_id": "8b2fc64a-ab0f-4d1c-a6cb-97e97e4d309d",
+          "id": "8b2fc64a-ab0f-4d1c-a6cb-97e97e4d309d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -367,7 +367,7 @@
           "response": []
         }
       ],
-      "_postman_id": "ccd8829c-0186-44ba-8d6f-3010a63e70e9"
+      "id": "ccd8829c-0186-44ba-8d6f-3010a63e70e9"
     },
     {
       "name": "Withdrawals",
@@ -386,7 +386,7 @@
               }
             }
           ],
-          "_postman_id": "9b818ea7-7989-4d3c-8e17-d1589aff45ed",
+          "id": "9b818ea7-7989-4d3c-8e17-d1589aff45ed",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -407,7 +407,7 @@
           "response": []
         }
       ],
-      "_postman_id": "44ef8702-9226-40d5-81a7-557c13bfd708"
+      "id": "44ef8702-9226-40d5-81a7-557c13bfd708"
     },
     {
       "name": "sales",
@@ -429,7 +429,7 @@
               }
             }
           ],
-          "_postman_id": "d0391a79-bed4-4c42-b7ec-ff592bd05085",
+          "id": "d0391a79-bed4-4c42-b7ec-ff592bd05085",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -438,7 +438,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Client\":{\"Id\":56667,\"Name\":\" DANIELA GALITO\",\"Dni\":\"18063151\",\"Password\":null,\"Activated\":false,\"Facebook\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"Email\":\"**********ito@gmail.com\",\"DecryptedMail\":null,\"Address\":null,\"Cellphone\":null,\"OnlyConsigners\":false,\"CardNumber\":\"\",\"BirthDate\":null},\"Items\":[{\"Id\":{{item_id}},\"Description\":\"d\",\"Code\":\"LH0002021121\",\"Gender\":0,\"Price\":{{item_price}},\"Expiration\":\"0001-01-01T00:00:00\",\"BrandId\":null,\"Brand\":null,\"SizeId\":null,\"Size\":null,\"TypeId\":null,\"Type\":null,\"ItemStateId\":0,\"ItemState\":null,\"Colors\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"ItemAcquisition\":null,\"AcquisitionId\":null,\"IsCatalog\":false,\"OriginalCreationDate\":null,\"OriginalCreationStore\":null}],\"Payments\":{\"Cash\":{\"Method\":1,\"Amount\":{{item_price}}},\"Credit\":{\"Method\":0,\"Amount\":0.00},\"Discount\":{\"Method\":2,\"Amount\":0.0},\"CreditCard\":{\"Method\":3,\"Amount\":0.0,\"CreditCardPayments\":[]},\"Methods\":[{\"Method\":1,\"Amount\":{{item_price}}},{\"Method\":0,\"Amount\":0.00},{\"Method\":2,\"Amount\":0.0},{\"Method\":3,\"Amount\":0.0,\"CreditCardPayments\":[]}]},\"Tax\":false,\"Date\":\"2022-02-21T20:19:53\",\"Amount\":0.0,\"Comment\":\"\",\"DiscountReference\":\"\",\"UserId\":66,\"StoreId\":0,\"CreditAvailable\":0.0,\"EditSale\":false},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":66}",
+              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Client\":{\"Id\":56667,\"Name\":\" DANIELA GALITO\",\"Dni\":\"18063151\",\"Password\":null,\"Activated\":false,\"Facebook\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"Email\":\"**********ito@gmail.com\",\"DecryptedMail\":null,\"Address\":null,\"Cellphone\":null,\"OnlyConsigners\":false,\"CardNumber\":\"\",\"BirthDate\":null},\"Items\":[{\"Id\":{{item_id}},\"Description\":\"d\",\"Code\":\"LH0002021121\",\"Gender\":0,\"Price\":{{item_price}},\"Expiration\":\"0001-01-01T00:00:00\",\"BrandId\":null,\"Brand\":null,\"SizeId\":null,\"Size\":null,\"TypeId\":null,\"Type\":null,\"ItemStateId\":0,\"ItemState\":null,\"Colors\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"ItemAcquisition\":null,\"AcquisitionId\":null,\"IsCatalog\":false,\"OriginalCreationDate\":null,\"OriginalCreationStore\":null}],\"Payments\":{\"Cash\":{\"Method\":1,\"Amount\":{{item_price}}},\"Credit\":{\"Method\":0,\"Amount\":0.00},\"Discount\":{\"Method\":2,\"Amount\":0.0},\"CreditCard\":{\"Method\":3,\"Amount\":0.0,\"CreditCardPayments\":[]},\"Methods\":[{\"Method\":1,\"Amount\":{{item_price}}},{\"Method\":0,\"Amount\":0.00},{\"Method\":2,\"Amount\":0.0},{\"Method\":3,\"Amount\":0.0,\"CreditCardPayments\":[]}]},\"Tax\":false,\"Date\":\"2022-02-26T20:19:53\",\"Amount\":0.0,\"Comment\":\"\",\"DiscountReference\":\"\",\"UserId\":66,\"StoreId\":0,\"CreditAvailable\":0.0,\"EditSale\":false},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":66}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -450,7 +450,7 @@
           "response": []
         }
       ],
-      "_postman_id": "9fb38283-be44-459a-947d-db6bd1feddd1"
+      "id": "9fb38283-be44-459a-947d-db6bd1feddd1"
     }
   ]
 }
