@@ -243,7 +243,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\"token\":null,\"payload\":{\"Email\":\"@paulina\",\"Password\":\"PaulinaB2\"},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+              "raw": "{\"token\":null,\"payload\":{\"Email\":\"@paulina\",\"Password\":\"PaulinaB3\"},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
               "options": {
                 "raw": {
                   "language": "json"
