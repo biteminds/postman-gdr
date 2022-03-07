@@ -19,7 +19,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJJZCI6NjYsIk5hbWUiOiJQYXVsaW5hIiwiRW1haWwiOiJwYXVsaW5hLmJlbGxhdmlnbmFAZW5nZWUuY29tLmFyIiwiUm9sZUlkIjo0fQ.Mebttml-1__rjuLRqbdhV9P2Cs9w0UOtL5JzK8Ic4ctMPk-YMae1KMJxJFvivMM3Mw97vxlizRzKo_CdmEJmDQ\",\"payload\":{\"Start\":\"2021-12-01T00:00:00\",\"End\":\"2021-12-31T23:59:59\"},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Start\":\"2022-02-01T00:00:00\",\"End\":\"2022-02-28T23:59:59\"},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
               "options": {
                 "raw": {
                   "language": "json"
