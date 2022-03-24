@@ -63,7 +63,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "        {\"token\":\"{{token}}\",\"payload\":{\"Start\":\"2022-01-01T00:00:00\",\"End\":\"2022-01-31T23:59:59\",\"Types\":[\"cash\"]},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+              "raw": "        {\"token\":\"{{token}}\",\"payload\":{\"Start\":\"2022-03-01T00:00:00\",\"End\":\"2022-03-31T23:59:59\",\"Types\":[\"cash\"]},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
               "options": {
                 "raw": {
                   "language": "json"
