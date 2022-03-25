@@ -349,7 +349,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Acquisition\":null,\"AcquisitionMethod\":null,\"Offset\":10,\"Limit\":10,\"Gender\":0,\"Code\":\"\",\"Brands\":null,\"Sizes\":null,\"Colors\":null,\"Types\":null,\"Categories\":null,\"Keyword\":null,\"ItemStates\":[\"new\",\"returned\",\"donated\",\"stockable\",\"missed\",\"unhanged\",\"withdrawn\",\"dynamic\",\"entered\"],\"KeywordsList\":[],\"Price\":null,\"Sale\":null,\"HasExpired\":0,\"Client\":null,\"AcquisitionTypes\":null},\"Store\":{\"Id\":1,\"Name\":null,\"Address\":null},\"UserId\":0}",
+              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Acquisition\":null,\"AcquisitionMethod\":null,\"Offset\":10,\"Limit\":10,\"Gender\":0,\"Code\":\"\",\"Brands\":null,\"Sizes\":null,\"Colors\":null,\"Types\":null,\"Categories\":null,\"Keyword\":null,\"ItemStates\":[\"sold\",\"new\",\"returned\",\"donated\",\"stockable\",\"missed\",\"unhanged\",\"withdrawn\",\"dynamic\",\"entered\"],\"KeywordsList\":[],\"Price\":null,\"Sale\":null,\"HasExpired\":0,\"Client\":null,\"AcquisitionTypes\":null},\"Store\":{\"Id\":1,\"Name\":null,\"Address\":null},\"UserId\":0}",
               "options": {
                 "raw": {
                   "language": "json"
