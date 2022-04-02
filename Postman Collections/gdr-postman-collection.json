@@ -73,6 +73,18 @@
             "url": "{{api_url}}/api/Reports/GetAcquisitionsReport"
           },
           "response": []
+        },
+        {
+          "name": "New Request",
+          "id": "67aafe07-1bbf-40c6-bf82-882f0206adb2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
         }
       ],
       "id": "343840a5-0332-48c0-b749-280cd6007464"
