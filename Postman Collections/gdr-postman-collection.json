@@ -75,7 +75,7 @@
           "response": []
         },
         {
-          "name": "New Request",
+          "name": "GetExcelReport",
           "id": "67aafe07-1bbf-40c6-bf82-882f0206adb2",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
