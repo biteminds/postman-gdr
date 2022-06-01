@@ -1,490 +1,500 @@
 {
-  "info": {
-    "_postman_id": "4018f1f1-9d13-4fb7-9b50-c2539958b820",
-    "name": "GDR",
-    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "report",
-      "item": [
-        {
-          "name": "GetSalesReport",
-          "id": "718fc7e1-f00b-4f68-b25e-70661f450943",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Start\":\"2022-02-01T00:00:00\",\"End\":\"2022-02-28T23:59:59\"},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "http://localhost:16215/api/Reports/GetSalesReport"
-          },
-          "response": []
-        },
-        {
-          "name": "GetItemsReport",
-          "id": "dc2710dc-0b41-43e3-a6d6-25ecf24717e2",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Start\":\"0001-01-01T00:00:00\",\"End\":\"0001-01-01T00:00:00\",\"Types\":[\"consignation\"],\"ItemStates\":[\"new\",\"returned\"]},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/Reports/GetItemsReport"
-          },
-          "response": []
-        },
-        {
-          "name": "GetAcquisitionsReport",
-          "id": "ff499501-1756-4f80-b7da-73621781ed6c",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "        {\"token\":\"{{token}}\",\"payload\":{\"Start\":\"2022-03-01T00:00:00\",\"End\":\"2022-03-31T23:59:59\",\"Types\":[\"cash\"]},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/Reports/GetAcquisitionsReport"
-          },
-          "response": []
-        },
-        {
-          "name": "GetExcelReport",
-          "id": "67aafe07-1bbf-40c6-bf82-882f0206adb2",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": []
-          },
-          "response": []
-        }
-      ],
-      "id": "343840a5-0332-48c0-b749-280cd6007464"
-    },
-    {
-      "name": "Acquisition",
-      "item": [
-        {
-          "name": "list",
-          "id": "e14a973e-b5b2-426f-bead-e24700c99b07",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Offset\":0,\"Limit\":10,\"CompletionState\":4,\"DateFrom\":\"0001-01-01T00:00:00\",\"AcquisitionStates\":null,\"DateTo\":\"0001-01-01T00:00:00\",\"Client\":null,\"Id\":0,\"ItemCode\":null,\"ItemDescription\":null,\"ContractNumber\":null,\"ExpirationDate\":\"0001-01-01T00:00:00\",\"Vip\":null},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/Acquisitions/list"
-          },
-          "response": []
-        },
-        {
-          "name": "list Copy",
-          "id": "854de2a5-b4ff-4aac-ba0c-af88fa33193b",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Offset\":0,\"Limit\":1,\"CompletionState\":4,\"DateFrom\":\"0001-01-01T00:00:00\",\"AcquisitionStates\":null,\"DateTo\":\"0001-01-01T00:00:00\",\"Client\":null,\"Id\":42710,\"ItemCode\":null,\"ItemDescription\":null,\"ContractNumber\":null,\"ExpirationDate\":\"0001-01-01T00:00:00\",\"Vip\":null},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "http://localhost:16215/api/Acquisitions/list"
-          },
-          "response": []
-        },
-        {
-          "name": "CreateAndCatalog",
-          "id": "42dd4d02-e883-4628-8073-bc512da7aebf",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Id\":0,\"Code\":null,\"Commentary\":\"\",\"ItemAmount\":1,\"RealAmount\":1,\"ContractNumber\":\"\",\"BillNumber\":\"\",\"Vip\":false,\"Client\":{\"Id\":54791,\"Name\":\" dolores amitrano\",\"Dni\":\"66558899\",\"Password\":null,\"Activated\":false,\"Facebook\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"Email\":null,\"DecryptedMail\":null,\"Address\":\"\",\"Cellphone\":\"\",\"OnlyConsigners\":false,\"CardNumber\":\"\",\"BirthDate\":null},\"Date\":\"2022-01-18T12:27:01.5966633\",\"AcquisitionMethods\":null,\"ItemCatalogPayload\":[{\"ItemInformation\":null,\"AcquisitionMethod\":null,\"ItemType\":{\"Id\":23,\"Description\":null,\"Name\":null,\"CategoryId\":0,\"Category\":null,\"CreationDate\":null,\"CreatorUserId\":null,\"CreatorUser\":null,\"ModificationDate\":null,\"EditorUserId\":null,\"EditorUser\":null,\"MergeWith\":null},\"Brand\":{\"Id\":7624,\"Name\":null,\"Description\":null,\"CreationDate\":null,\"CreatorUserId\":null,\"CreatorUser\":null,\"ModificationDate\":null,\"EditorUserId\":null,\"EditorUser\":null,\"MergeWith\":null},\"Price\":197.99,\"AcquisitionType\":{\"Id\":1,\"DefaultPercentage\":0,\"Description\":null,\"SystemName\":\"credit\",\"Name\":null},\"Cost\":49.99,\"Check\":false,\"Code\":null,\"UserId\":0,\"Description\":null,\"Size\":null,\"Colors\":null,\"Gender\":2}],\"StoreId\":0,\"UserId\":66,\"CatalogByGDR\":false,\"FileName\":null},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":66}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/Acquisitions/CreateAndCatalog"
-          },
-          "response": []
-        }
-      ],
-      "id": "2c2f4b1c-5f6c-4f8c-85e3-de44298e307b"
-    },
-    {
-      "name": "Operations",
-      "item": [
-        {
-          "name": "list",
-          "id": "96da4722-efb1-43e2-b0c1-fac8fc65d940",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJJZCI6NjYsIk5hbWUiOiJQYXVsaW5hIiwiRW1haWwiOiJwYXVsaW5hLmJlbGxhdmlnbmFAZW5nZWUuY29tLmFyIiwiUm9sZUlkIjo0fQ.Mebttml-1__rjuLRqbdhV9P2Cs9w0UOtL5JzK8Ic4ctMPk-YMae1KMJxJFvivMM3Mw97vxlizRzKo_CdmEJmDQ\",\"payload\":{\"Name\":\"\",\"Limit\":2147483647,\"Offset\":0},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "http://localhost:16215/api/Operations/list"
-          },
-          "response": []
-        }
-      ],
-      "id": "dbdaa4ce-c252-4088-9f63-36f3d2dbd9d6"
-    },
-    {
-      "name": "OperationTypes",
-      "item": [
-        {
-          "name": "list",
-          "id": "b755771e-f9b9-447f-a420-855602a69176",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJJZCI6NjYsIk5hbWUiOiJQYXVsaW5hIiwiRW1haWwiOiJwYXVsaW5hLmJlbGxhdmlnbmFAZW5nZWUuY29tLmFyIiwiUm9sZUlkIjo0fQ.Mebttml-1__rjuLRqbdhV9P2Cs9w0UOtL5JzK8Ic4ctMPk-YMae1KMJxJFvivMM3Mw97vxlizRzKo_CdmEJmDQ\",\"payload\":{\"Name\":\"\",\"Limit\":2147483647,\"Offset\":0},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "http://localhost:16215/api/OperationTypes/list"
-          },
-          "response": []
-        }
-      ],
-      "id": "50e3859c-6c66-48a1-af12-d3ecef6bc38c"
-    },
-    {
-      "name": "Users",
-      "item": [
-        {
-          "name": "login",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "bbb2648e-927e-44e4-a380-a973ae74826b",
-                "exec": [
-                  "var jsonData = JSON.parse(responseBody);\r",
-                  "pm.environment.set(\"token\", pm.response.json().Payload.Token);\r",
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ],
-                "type": "text/javascript"
-              }
-            },
-            {
-              "listen": "prerequest",
-              "script": {
-                "id": "ecca35c5-f437-4ecf-b258-04f4aad88f6c",
-                "exec": [
-                  "pm.environment.set(\"fecha_actual\", Date);"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "4b8c5d8a-a8dc-477c-9e75-c409b62fcf2f",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":null,\"payload\":{\"Email\":\"@paulina\",\"Password\":\"PaulinaB3\"},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/Users/login"
-          },
-          "response": []
-        }
-      ],
-      "id": "cb17d5a5-10cf-4af9-a4f4-7309285a28af"
-    },
-    {
-      "name": "Tills",
-      "item": [
-        {
-          "name": "tills",
-          "id": "c868b346-a8ae-4422-9064-71a2b2dd170a",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":null,\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "http://localhost:16215/api/Tills/GetDailyBalances"
-          },
-          "response": []
-        }
-      ],
-      "id": "920c4193-9e8f-4357-9615-a967ee230037"
-    },
-    {
-      "name": "ItemTypes",
-      "item": [
-        {
-          "name": "list",
-          "id": "5c9fdf56-69f6-4446-97f5-85bb4c58645a",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Name\":null,\"Limit\":2147483647,\"Offset\":0},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/ItemTypes/list"
-          },
-          "response": []
-        }
-      ],
-      "id": "3275af0d-a675-46c9-8543-be8dd56b898a"
-    },
-    {
-      "name": "Items",
-      "item": [
-        {
-          "name": "List",
-          "id": "cc9f2b4d-5eaa-4586-8a4b-4b720fe621ef",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Acquisition\":null,\"AcquisitionMethod\":null,\"Offset\":0,\"Limit\":10,\"Gender\":0,\"Code\":null,\"Brands\":null,\"Sizes\":null,\"Colors\":null,\"Types\":null,\"Categories\":null,\"Keyword\":null,\"ItemStates\":[\"new\",\"sold\",\"returned\",\"donated\",\"stockable\",\"missed\",\"unhanged\",\"withdrawn\",\"dynamic\",\"entered\"],\"KeywordsList\":[],\"Price\":null,\"Sale\":null,\"HasExpired\":0,\"Client\":null,\"AcquisitionTypes\":[3,1,2]},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/Items/List"
-          },
-          "response": []
-        },
-        {
-          "name": "List Copy",
-          "id": "00ff1870-2022-4197-a012-48554986dbbc",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Acquisition\":null,\"AcquisitionMethod\":null,\"Offset\":10,\"Limit\":10,\"Gender\":0,\"Code\":\"\",\"Brands\":null,\"Sizes\":null,\"Colors\":null,\"Types\":null,\"Categories\":null,\"Keyword\":null,\"ItemStates\":[\"sold\",\"new\",\"returned\",\"donated\",\"stockable\",\"missed\",\"unhanged\",\"withdrawn\",\"dynamic\",\"entered\"],\"KeywordsList\":[],\"Price\":null,\"Sale\":null,\"HasExpired\":0,\"Client\":null,\"AcquisitionTypes\":null},\"Store\":{\"Id\":1,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/Items/List_Refactor"
-          },
-          "response": []
-        }
-      ],
-      "id": "ecb55884-eec2-4011-a89c-2bb40b182ab0"
-    },
-    {
-      "name": "Clients",
-      "item": [
-        {
-          "name": "list",
-          "id": "8b2fc64a-ab0f-4d1c-a6cb-97e97e4d309d",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Client\":{\"Id\":0,\"Name\":null,\"Dni\":null,\"Password\":null,\"Activated\":false,\"Facebook\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"Email\":null,\"DecryptedMail\":null,\"Address\":null,\"Cellphone\":null,\"OnlyConsigners\":true,\"CardNumber\":null,\"BirthDate\":null},\"Limit\":10,\"Offset\":0},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/clients/list"
-          },
-          "response": []
-        }
-      ],
-      "id": "ccd8829c-0186-44ba-8d6f-3010a63e70e9"
-    },
-    {
-      "name": "Withdrawals",
-      "item": [
-        {
-          "name": "Withdrawals",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "63060a9d-9963-4b12-b6b5-068ad11ac8bb",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "9b818ea7-7989-4d3c-8e17-d1589aff45ed",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Offset\":0,\"Limit\":10,\"CompletionState\":4,\"DateFrom\":\"0001-01-01T00:00:00\",\"AcquisitionStates\":null,\"DateTo\":\"0001-01-01T00:00:00\",\"Client\":null,\"Id\":0,\"ItemCode\":null,\"ItemDescription\":null,\"ContractNumber\":null,\"ExpirationDate\":\"0001-01-01T00:00:00\",\"Vip\":null},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/Acquisitions/ListConsignationAcquisitions"
-          },
-          "response": []
-        }
-      ],
-      "id": "44ef8702-9226-40d5-81a7-557c13bfd708"
-    },
-    {
-      "name": "sales",
-      "item": [
-        {
-          "name": "generate",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "1b70599b-1b57-4f44-9cd3-685e0b3c3dba",
-                "exec": [
-                  "tests[\"Status code is 200\"] = responseCode.code === 200;\r",
-                  "//var data = JSON.parse(responseBody);\r",
-                  "//tests[\"Body has serviceId\"] = data.Payload.SaleId;\r",
-                  "//tests[\"Message: \" + data.Payload.ExceptionString];"
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "d0391a79-bed4-4c42-b7ec-ff592bd05085",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\"token\":\"{{token}}\",\"payload\":{\"Client\":{\"Id\":56667,\"Name\":\" DANIELA GALITO\",\"Dni\":\"18063151\",\"Password\":null,\"Activated\":false,\"Facebook\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"Email\":\"**********ito@gmail.com\",\"DecryptedMail\":null,\"Address\":null,\"Cellphone\":null,\"OnlyConsigners\":false,\"CardNumber\":\"\",\"BirthDate\":null},\"Items\":[{\"Id\":{{item_id}},\"Description\":\"d\",\"Code\":\"LH0002021121\",\"Gender\":0,\"Price\":{{item_price}},\"Expiration\":\"0001-01-01T00:00:00\",\"BrandId\":null,\"Brand\":null,\"SizeId\":null,\"Size\":null,\"TypeId\":null,\"Type\":null,\"ItemStateId\":0,\"ItemState\":null,\"Colors\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"ItemAcquisition\":null,\"AcquisitionId\":null,\"IsCatalog\":false,\"OriginalCreationDate\":null,\"OriginalCreationStore\":null}],\"Payments\":{\"Cash\":{\"Method\":1,\"Amount\":{{item_price}}},\"Credit\":{\"Method\":0,\"Amount\":0.00},\"Discount\":{\"Method\":2,\"Amount\":0.0},\"CreditCard\":{\"Method\":3,\"Amount\":0.0,\"CreditCardPayments\":[]},\"Methods\":[{\"Method\":1,\"Amount\":{{item_price}}},{\"Method\":0,\"Amount\":0.00},{\"Method\":2,\"Amount\":0.0},{\"Method\":3,\"Amount\":0.0,\"CreditCardPayments\":[]}]},\"Tax\":false,\"Date\":\"2022-02-26T20:19:53\",\"Amount\":0.0,\"Comment\":\"\",\"DiscountReference\":\"\",\"UserId\":66,\"StoreId\":0,\"CreditAvailable\":0.0,\"EditSale\":false},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":66}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": "{{api_url}}/api/Sales/generate"
-          },
-          "response": []
-        }
-      ],
-      "id": "9fb38283-be44-459a-947d-db6bd1feddd1"
-    }
-  ]
+	"info": {
+		"_postman_id": "4018f1f1-9d13-4fb7-9b50-c2539958b820",
+		"name": "GDR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "report",
+			"item": [
+				{
+					"name": "GetSalesReport",
+					"id": "718fc7e1-f00b-4f68-b25e-70661f450943",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Start\":\"2022-02-01T00:00:00\",\"End\":\"2022-02-28T23:59:59\"},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:16215/api/Reports/GetSalesReport"
+					},
+					"response": []
+				},
+				{
+					"name": "GetItemsReport",
+					"id": "dc2710dc-0b41-43e3-a6d6-25ecf24717e2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Start\":\"0001-01-01T00:00:00\",\"End\":\"0001-01-01T00:00:00\",\"Types\":[\"consignation\"],\"ItemStates\":[\"new\",\"returned\"]},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/Reports/GetItemsReport"
+					},
+					"response": []
+				},
+				{
+					"name": "GetAcquisitionsReport",
+					"id": "ff499501-1756-4f80-b7da-73621781ed6c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "        {\"token\":\"{{token}}\",\"payload\":{\"Start\":\"2022-03-01T00:00:00\",\"End\":\"2022-03-31T23:59:59\",\"Types\":[\"cash\"]},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/Reports/GetAcquisitionsReport"
+					},
+					"response": []
+				},
+				{
+					"name": "GetExcelReport",
+					"id": "67aafe07-1bbf-40c6-bf82-882f0206adb2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJJZCI6NjYsIk5hbWUiOiJQYXVsaW5hIiwiRW1haWwiOiJwYXVsaW5hLmJlbGxhdmlnbmFAZW5nZWUuY29tLmFyIiwiUm9sZUlkIjo0fQ.Mebttml-1__rjuLRqbdhV9P2Cs9w0UOtL5JzK8Ic4ctMPk-YMae1KMJxJFvivMM3Mw97vxlizRzKo_CdmEJmDQ\",\"payload\":{\"Start\":\"2022-04-02T00:00:00\",\"End\":\"2022-04-02T23:59:59\",\"ReportTypes\":[1,2,3,19,25],\"Emails\":\"\"},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/Reports/GetExcelReport"
+					},
+					"response": []
+				}
+			],
+			"id": "343840a5-0332-48c0-b749-280cd6007464"
+		},
+		{
+			"name": "Acquisition",
+			"item": [
+				{
+					"name": "list",
+					"id": "e14a973e-b5b2-426f-bead-e24700c99b07",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Offset\":0,\"Limit\":10,\"CompletionState\":4,\"DateFrom\":\"0001-01-01T00:00:00\",\"AcquisitionStates\":null,\"DateTo\":\"0001-01-01T00:00:00\",\"Client\":null,\"Id\":0,\"ItemCode\":null,\"ItemDescription\":null,\"ContractNumber\":null,\"ExpirationDate\":\"0001-01-01T00:00:00\",\"Vip\":null},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/Acquisitions/list"
+					},
+					"response": []
+				},
+				{
+					"name": "list Copy",
+					"id": "854de2a5-b4ff-4aac-ba0c-af88fa33193b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Offset\":0,\"Limit\":1,\"CompletionState\":4,\"DateFrom\":\"0001-01-01T00:00:00\",\"AcquisitionStates\":null,\"DateTo\":\"0001-01-01T00:00:00\",\"Client\":null,\"Id\":42710,\"ItemCode\":null,\"ItemDescription\":null,\"ContractNumber\":null,\"ExpirationDate\":\"0001-01-01T00:00:00\",\"Vip\":null},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:16215/api/Acquisitions/list"
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAndCatalog",
+					"id": "42dd4d02-e883-4628-8073-bc512da7aebf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Id\":0,\"Code\":null,\"Commentary\":\"\",\"ItemAmount\":1,\"RealAmount\":1,\"ContractNumber\":\"\",\"BillNumber\":\"\",\"Vip\":false,\"Client\":{\"Id\":54791,\"Name\":\" dolores amitrano\",\"Dni\":\"66558899\",\"Password\":null,\"Activated\":false,\"Facebook\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"Email\":null,\"DecryptedMail\":null,\"Address\":\"\",\"Cellphone\":\"\",\"OnlyConsigners\":false,\"CardNumber\":\"\",\"BirthDate\":null},\"Date\":\"2022-01-18T12:27:01.5966633\",\"AcquisitionMethods\":null,\"ItemCatalogPayload\":[{\"ItemInformation\":null,\"AcquisitionMethod\":null,\"ItemType\":{\"Id\":23,\"Description\":null,\"Name\":null,\"CategoryId\":0,\"Category\":null,\"CreationDate\":null,\"CreatorUserId\":null,\"CreatorUser\":null,\"ModificationDate\":null,\"EditorUserId\":null,\"EditorUser\":null,\"MergeWith\":null},\"Brand\":{\"Id\":7624,\"Name\":null,\"Description\":null,\"CreationDate\":null,\"CreatorUserId\":null,\"CreatorUser\":null,\"ModificationDate\":null,\"EditorUserId\":null,\"EditorUser\":null,\"MergeWith\":null},\"Price\":197.99,\"AcquisitionType\":{\"Id\":1,\"DefaultPercentage\":0,\"Description\":null,\"SystemName\":\"credit\",\"Name\":null},\"Cost\":49.99,\"Check\":false,\"Code\":null,\"UserId\":0,\"Description\":null,\"Size\":null,\"Colors\":null,\"Gender\":2}],\"StoreId\":0,\"UserId\":66,\"CatalogByGDR\":false,\"FileName\":null},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":66}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/Acquisitions/CreateAndCatalog"
+					},
+					"response": []
+				}
+			],
+			"id": "2c2f4b1c-5f6c-4f8c-85e3-de44298e307b"
+		},
+		{
+			"name": "Operations",
+			"item": [
+				{
+					"name": "list",
+					"id": "96da4722-efb1-43e2-b0c1-fac8fc65d940",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJJZCI6NjYsIk5hbWUiOiJQYXVsaW5hIiwiRW1haWwiOiJwYXVsaW5hLmJlbGxhdmlnbmFAZW5nZWUuY29tLmFyIiwiUm9sZUlkIjo0fQ.Mebttml-1__rjuLRqbdhV9P2Cs9w0UOtL5JzK8Ic4ctMPk-YMae1KMJxJFvivMM3Mw97vxlizRzKo_CdmEJmDQ\",\"payload\":{\"Name\":\"\",\"Limit\":2147483647,\"Offset\":0},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:16215/api/Operations/list"
+					},
+					"response": []
+				}
+			],
+			"id": "dbdaa4ce-c252-4088-9f63-36f3d2dbd9d6"
+		},
+		{
+			"name": "OperationTypes",
+			"item": [
+				{
+					"name": "list",
+					"id": "b755771e-f9b9-447f-a420-855602a69176",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJJZCI6NjYsIk5hbWUiOiJQYXVsaW5hIiwiRW1haWwiOiJwYXVsaW5hLmJlbGxhdmlnbmFAZW5nZWUuY29tLmFyIiwiUm9sZUlkIjo0fQ.Mebttml-1__rjuLRqbdhV9P2Cs9w0UOtL5JzK8Ic4ctMPk-YMae1KMJxJFvivMM3Mw97vxlizRzKo_CdmEJmDQ\",\"payload\":{\"Name\":\"\",\"Limit\":2147483647,\"Offset\":0},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:16215/api/OperationTypes/list"
+					},
+					"response": []
+				}
+			],
+			"id": "50e3859c-6c66-48a1-af12-d3ecef6bc38c"
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "bbb2648e-927e-44e4-a380-a973ae74826b",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"token\", pm.response.json().Payload.Token);\r",
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ecca35c5-f437-4ecf-b258-04f4aad88f6c",
+								"exec": [
+									"pm.environment.set(\"fecha_actual\", Date);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "4b8c5d8a-a8dc-477c-9e75-c409b62fcf2f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":null,\"payload\":{\"Email\":\"@paulina\",\"Password\":\"PaulinaB3\"},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/Users/login"
+					},
+					"response": []
+				}
+			],
+			"id": "cb17d5a5-10cf-4af9-a4f4-7309285a28af"
+		},
+		{
+			"name": "Tills",
+			"item": [
+				{
+					"name": "tills",
+					"id": "c868b346-a8ae-4422-9064-71a2b2dd170a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":null,\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:16215/api/Tills/GetDailyBalances"
+					},
+					"response": []
+				}
+			],
+			"id": "920c4193-9e8f-4357-9615-a967ee230037"
+		},
+		{
+			"name": "ItemTypes",
+			"item": [
+				{
+					"name": "list",
+					"id": "5c9fdf56-69f6-4446-97f5-85bb4c58645a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Name\":null,\"Limit\":2147483647,\"Offset\":0},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/ItemTypes/list"
+					},
+					"response": []
+				}
+			],
+			"id": "3275af0d-a675-46c9-8543-be8dd56b898a"
+		},
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "List",
+					"id": "cc9f2b4d-5eaa-4586-8a4b-4b720fe621ef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Acquisition\":null,\"AcquisitionMethod\":null,\"Offset\":0,\"Limit\":10,\"Gender\":0,\"Code\":null,\"Brands\":null,\"Sizes\":null,\"Colors\":null,\"Types\":null,\"Categories\":null,\"Keyword\":null,\"ItemStates\":[\"new\",\"sold\",\"returned\",\"donated\",\"stockable\",\"missed\",\"unhanged\",\"withdrawn\",\"dynamic\",\"entered\"],\"KeywordsList\":[],\"Price\":null,\"Sale\":null,\"HasExpired\":0,\"Client\":null,\"AcquisitionTypes\":[3,1,2]},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/Items/List"
+					},
+					"response": []
+				},
+				{
+					"name": "List Copy",
+					"id": "00ff1870-2022-4197-a012-48554986dbbc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Acquisition\":null,\"AcquisitionMethod\":null,\"Offset\":10,\"Limit\":10,\"Gender\":0,\"Code\":\"\",\"Brands\":null,\"Sizes\":null,\"Colors\":null,\"Types\":null,\"Categories\":null,\"Keyword\":null,\"ItemStates\":[\"sold\",\"new\",\"returned\",\"donated\",\"stockable\",\"missed\",\"unhanged\",\"withdrawn\",\"dynamic\",\"entered\"],\"KeywordsList\":[],\"Price\":null,\"Sale\":null,\"HasExpired\":0,\"Client\":null,\"AcquisitionTypes\":null},\"Store\":{\"Id\":1,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/Items/List_Refactor"
+					},
+					"response": []
+				}
+			],
+			"id": "ecb55884-eec2-4011-a89c-2bb40b182ab0"
+		},
+		{
+			"name": "Clients",
+			"item": [
+				{
+					"name": "list",
+					"id": "8b2fc64a-ab0f-4d1c-a6cb-97e97e4d309d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Client\":{\"Id\":0,\"Name\":null,\"Dni\":null,\"Password\":null,\"Activated\":false,\"Facebook\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"Email\":null,\"DecryptedMail\":null,\"Address\":null,\"Cellphone\":null,\"OnlyConsigners\":true,\"CardNumber\":null,\"BirthDate\":null},\"Limit\":10,\"Offset\":0},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/clients/list"
+					},
+					"response": []
+				}
+			],
+			"id": "ccd8829c-0186-44ba-8d6f-3010a63e70e9"
+		},
+		{
+			"name": "Withdrawals",
+			"item": [
+				{
+					"name": "Withdrawals",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "63060a9d-9963-4b12-b6b5-068ad11ac8bb",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "9b818ea7-7989-4d3c-8e17-d1589aff45ed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Offset\":0,\"Limit\":10,\"CompletionState\":4,\"DateFrom\":\"0001-01-01T00:00:00\",\"AcquisitionStates\":null,\"DateTo\":\"0001-01-01T00:00:00\",\"Client\":null,\"Id\":0,\"ItemCode\":null,\"ItemDescription\":null,\"ContractNumber\":null,\"ExpirationDate\":\"0001-01-01T00:00:00\",\"Vip\":null},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":0}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/Acquisitions/ListConsignationAcquisitions"
+					},
+					"response": []
+				}
+			],
+			"id": "44ef8702-9226-40d5-81a7-557c13bfd708"
+		},
+		{
+			"name": "sales",
+			"item": [
+				{
+					"name": "generate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1b70599b-1b57-4f44-9cd3-685e0b3c3dba",
+								"exec": [
+									"tests[\"Status code is 200\"] = responseCode.code === 200;\r",
+									"//var data = JSON.parse(responseBody);\r",
+									"//tests[\"Body has serviceId\"] = data.Payload.SaleId;\r",
+									"//tests[\"Message: \" + data.Payload.ExceptionString];"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "d0391a79-bed4-4c42-b7ec-ff592bd05085",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\":\"{{token}}\",\"payload\":{\"Client\":{\"Id\":56667,\"Name\":\" DANIELA GALITO\",\"Dni\":\"18063151\",\"Password\":null,\"Activated\":false,\"Facebook\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"Email\":\"**********ito@gmail.com\",\"DecryptedMail\":null,\"Address\":null,\"Cellphone\":null,\"OnlyConsigners\":false,\"CardNumber\":\"\",\"BirthDate\":null},\"Items\":[{\"Id\":{{item_id}},\"Description\":\"d\",\"Code\":\"LH0002021121\",\"Gender\":0,\"Price\":{{item_price}},\"Expiration\":\"0001-01-01T00:00:00\",\"BrandId\":null,\"Brand\":null,\"SizeId\":null,\"Size\":null,\"TypeId\":null,\"Type\":null,\"ItemStateId\":0,\"ItemState\":null,\"Colors\":null,\"CreationDate\":\"0001-01-01T00:00:00\",\"ItemAcquisition\":null,\"AcquisitionId\":null,\"IsCatalog\":false,\"OriginalCreationDate\":null,\"OriginalCreationStore\":null}],\"Payments\":{\"Cash\":{\"Method\":1,\"Amount\":{{item_price}}},\"Credit\":{\"Method\":0,\"Amount\":0.00},\"Discount\":{\"Method\":2,\"Amount\":0.0},\"CreditCard\":{\"Method\":3,\"Amount\":0.0,\"CreditCardPayments\":[]},\"Methods\":[{\"Method\":1,\"Amount\":{{item_price}}},{\"Method\":0,\"Amount\":0.00},{\"Method\":2,\"Amount\":0.0},{\"Method\":3,\"Amount\":0.0,\"CreditCardPayments\":[]}]},\"Tax\":false,\"Date\":\"2022-02-26T20:19:53\",\"Amount\":0.0,\"Comment\":\"\",\"DiscountReference\":\"\",\"UserId\":66,\"StoreId\":0,\"CreditAvailable\":0.0,\"EditSale\":false},\"Store\":{\"Id\":2,\"Name\":null,\"Address\":null},\"UserId\":66}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{api_url}}/api/Sales/generate"
+					},
+					"response": []
+				}
+			],
+			"id": "9fb38283-be44-459a-947d-db6bd1feddd1"
+		}
+	]
 }
